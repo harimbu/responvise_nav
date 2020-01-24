@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+}
+
+nav {
+  height: 80px;
+  color: white;
+  background-color: #512da8;
+}
+
+label.logo {
+  font-size: 36px;
+  line-height: 80px;
+  padding: 0 100px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 40px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  font-size: 18px;
+  color: white;
+  line-height: 80px;
+  margin: 0 10px;
+  padding: 6px 16px;
+  border-radius: 5px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  transition: background-color 0.5s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #7e57c2;
+}
+
+.checkBtn {
+  font-size: 36px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  label.logo {
+    padding: 0 50px;
+  }
+
+  nav ul li a {
+    margin: 0 8px;
+    padding: 4px 12px;
+  }
+}
+
+@media (max-width: 820px) {
+  label.logo {
+    padding: 0 20px;
+    font-size: 26px;
+  }
+  .checkBtn {
+    display: block;
+    margin-right: 20px;
+    font-size: 26px;
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background-color: #455a64;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    color: #d1c4e9;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: #fff;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+section {
+  background: url(./bg1.jpg) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: calc(100vh - 80px);
+}
