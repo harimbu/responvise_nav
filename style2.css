@@ -48,3 +48,16 @@ ul.menu li a:hover {
   background: #607d8b;
   border-radius: 6px;
 }
+
+.checkBtn {
+  float: right;
+  font-size: 36px;
+  line-height: 80px;
+  color: #fff;
+  margin-right: 60px;
+  display: none;
+}
+
+#check {
+  display: none;
+}
